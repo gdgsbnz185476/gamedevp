@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6hqil4v8kb4l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_355nw"]
+
+[node name="Area2D" type="Area2D"]
+metadata/spike = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_355nw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.831373, 0, 0.0745098, 1)
+metadata/_edit_use_anchors_ = true
