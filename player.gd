@@ -1,10 +1,9 @@
 extends CharacterBody2D
 
-
 @export var SPEED = 400.0
 @export var JUMP_VELOCITY = -450.0
 @export var DOUBLE_JUMP_VELOCITY = -550.0
-@export var movement = MOTION_MODE_FLOATING
+
 
 var double_jump = true
 var coin = 0
@@ -21,6 +20,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready():
 	global.coin = 0
 	global.lives = 3
+	@warning_ignore("shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable")
 	for coin in coins_group:
 		total_coins += 1
 
@@ -46,6 +46,7 @@ func _physics_process(delta):
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
+		
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
