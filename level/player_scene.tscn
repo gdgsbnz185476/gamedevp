@@ -21,7 +21,7 @@ var total_coins = 0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
-
+var can_contol : bool = true
 
 func _ready():
 	global.coin = 0
@@ -32,6 +32,7 @@ func _ready():
 
 
 func _physics_process(delta):
+	if not can_contol: return
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -77,6 +78,18 @@ func _win(area):
 	if area.has_meta(\"door\"):
 		if total_coins == global.coin:
 			get_tree().change_scene_to_file(\"res://win.tscn\")
+func handle_danger() -> void:
+	print(\"Player Died!\")
+	visible= false
+	can_contol = false
+	
+	await get_tree().create_timer(1).timeout
+	reset_player()
+	
+func reset_player() -> void:
+	global_position = level.loaded_level.level_start_pos.global_position
+	visible = true
+	can_control = true
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_scsro"]
@@ -134,6 +147,10 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = SubResource("GDScript_ij7rk")
+level_id = null
+SPEED = null
+JUMP_VELOCITY = null
+DOUBLE_JUMP_VELOCITY = null
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false

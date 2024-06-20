@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cdb0fik4lmvx5"]
+[gd_scene load_steps=14 format=3 uid="uid://cdb0fik4lmvx5"]
 
 [ext_resource type="PackedScene" uid="uid://1lnb43f26q0u" path="res://player_scene.tscn" id="1_mitlo"]
 [ext_resource type="PackedScene" uid="uid://yixi0hkj7ymw" path="res://platform.tscn" id="1_pr2gg"]
@@ -7,7 +7,21 @@
 [ext_resource type="PackedScene" uid="uid://c6hqil4v8kb4l" path="res://spike.tscn" id="4_rcvuq"]
 [ext_resource type="PackedScene" uid="uid://behquhi28q1xn" path="res://door.tscn" id="6_ycpna"]
 [ext_resource type="Texture2D" uid="uid://b4vf1a53dc046" path="res://TileMap.png" id="7_cxffg"]
-[ext_resource type="Script" path="res://Area2D.gd" id="7_o0r2m"]
+
+[sub_resource type="GDScript" id="GDScript_btppp"]
+resource_name = "level_data"
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_aelca"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -35,10 +49,23 @@ occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_itj5c")
 
+[sub_resource type="GDScript" id="GDScript_a15sj"]
+script/source = "extends Area2D
+
+# Called when the node enters the scene tree for the first time.
+
+# Function to handle when a body enters the spike area
+func _on_body_entered(body):
+	if body.is_in_group(\"player\"):
+		body.kill() # Assuming the player has a 'kill' method to handle death
+"
+metadata/death = true
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4618u"]
 size = Vector2(2643.62, 78)
 
 [node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_btppp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("3_4t5ef")
@@ -124,7 +151,7 @@ metadata/death = false
 
 [node name="Area2D" type="Area2D" parent="TileMap"]
 visible = false
-script = ExtResource("7_o0r2m")
+script = SubResource("GDScript_a15sj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Area2D"]
 position = Vector2(1238.81, 661)

@@ -2,3 +2,6 @@ res://level.tscn
 res://Area2D.gd
 res://player_scene.tscn
 res://TileMap.gd
+res://scene/obstacles /danger_zone.gd
+res://level/level.gd
+res://player.gd

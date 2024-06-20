@@ -1,9 +1,11 @@
+class_name Player
 extends CharacterBody2D
 
+@export var level_id : int
+@export var level_start_pos : Node2D
 @export var SPEED = 400.0
 @export var JUMP_VELOCITY = -450.0
 @export var DOUBLE_JUMP_VELOCITY = -550.0
-
 
 var double_jump = true
 var coin = 0
@@ -15,17 +17,19 @@ var total_coins = 0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
+var can_contol : bool = true
 
 func _ready():
 	global.coin = 0
 	global.lives = 3
-	@warning_ignore("shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable", "shadowed_variable")
+	@warning_ignore("shadowed_variable")
 	for coin in coins_group:
 		total_coins += 1
 
 
 func _physics_process(delta):
+	if not can_contol: return
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -41,18 +45,17 @@ func _physics_process(delta):
 		double_jump = true
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions ok.
-	
+	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
-		
+		$AnimatedSprite2D.scale.x = direction
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-
-
+	
+			
 func _death(area):
 	if area.has_meta("spike"):
 		if global.lives > 0:
@@ -61,13 +64,7 @@ func _death(area):
 		else:
 			get_tree().reload_current_scene()
 		
-func _kill(area):
-	if area.has_meta("death"):
-		if global.lives > 0:
-			position = Vector2(560, 337)
-			global.lives -= 1
-		else:
-			get_tree().reload_current_scene()
+
 func _coin(area):
 	if area.has_meta("coin"):
 		global.coin += 1
@@ -78,3 +75,25 @@ func _win(area):
 	if area.has_meta("door"):
 		if total_coins == global.coin:
 			get_tree().change_scene_to_file("res://win.tscn")
+
+func handle_danger() -> void:
+	print("Player Died!")
+	visible= false
+	can_contol = false
+	
+	await get_tree().create_timer(1).timeout
+	reset_player()
+	
+func reset_player() -> void:
+	global_position = LavelManager.loaded_level.level_start_pos.global_position
+	visible = true
+	can_control = true
+	
+	
+	
+	
+		
+		
+	
+	
+	
