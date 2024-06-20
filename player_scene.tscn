@@ -55,7 +55,14 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-
+func  _Area2D(area):
+	if area.has_meta(\"death\"):
+		if global.lives > 0:
+			position = Vector2(560, 337)
+			global.lives -= 1
+		else:
+			get_tree().reload_current_scene()
+			
 func _death(area):
 	if area.has_meta(\"spike\"):
 		if global.lives > 0:
@@ -167,6 +174,6 @@ sprite_frames = SubResource("SpriteFrames_pac2e")
 frame = 2
 frame_progress = 0.400948
 
-[connection signal="area_entered" from="Area2D" to="." method="_win"]
-[connection signal="area_entered" from="Area2D" to="." method="_coin"]
 [connection signal="area_entered" from="Area2D" to="." method="_death"]
+[connection signal="area_entered" from="Area2D" to="." method="_coin"]
+[connection signal="area_entered" from="Area2D" to="." method="_win"]

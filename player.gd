@@ -61,7 +61,13 @@ func _death(area):
 		else:
 			get_tree().reload_current_scene()
 		
-
+func _kill(area):
+	if area.has_meta("death"):
+		if global.lives > 0:
+			position = Vector2(560, 337)
+			global.lives -= 1
+		else:
+			get_tree().reload_current_scene()
 func _coin(area):
 	if area.has_meta("coin"):
 		global.coin += 1
