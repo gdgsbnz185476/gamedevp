@@ -25,6 +25,7 @@ var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
 func _ready():
 	global.coin = 0
 	global.lives = 3
+	@warning_ignore(\"shadowed_variable\")
 	for coin in coins_group:
 		total_coins += 1
 
@@ -55,8 +56,8 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-func  _Area2D(area):
-	if area.has_meta(\"death\"):
+func  _on_body_entered(body):
+	if body.is_in_group(\"player\"):
 		if global.lives > 0:
 			position = Vector2(560, 337)
 			global.lives -= 1
