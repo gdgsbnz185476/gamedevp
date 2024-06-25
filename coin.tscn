@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://bjnsibstmthbu"]
 
-[ext_resource type="Script" path="res://coin.gd" id="1_ndqjf"]
+[ext_resource type="Script" path="res://level/coin.gd" id="1_os0wo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_127ng"]
 
 [node name="Area2D" type="Area2D" groups=["coins"]]
-script = ExtResource("1_ndqjf")
+script = ExtResource("1_os0wo")
 metadata/coin = true
 
 [node name="ColorRect" type="ColorRect" parent="."]

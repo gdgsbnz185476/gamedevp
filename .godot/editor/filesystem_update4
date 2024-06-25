@@ -5,3 +5,11 @@ res://TileMap.gd
 res://scene/obstacles /danger_zone.gd
 res://level/level.gd
 res://player.gd
+res://level/danger_zone.tscn
+res://level/player.gd
+res://coin.tscn
+res://level/platform.tscn
+res://spike.tscn
+res://win.tscn
+res://level/ui.gd
+res://door.tscn

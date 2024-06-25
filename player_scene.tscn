@@ -1,0 +1,188 @@
+[gd_scene load_steps=12 format=3 uid="uid://dtquw4g4gj8lh"]
+
+[ext_resource type="Texture2D" uid="uid://cu3nj2x76bva8" path="res://Idle-Sheet.png" id="1_jgult"]
+
+[sub_resource type="GDScript" id="GDScript_ij7rk"]
+script/source = "extends CharacterBody2D
+
+@export var level_id :int
+@export var level_start_pos:Node2D
+@export var SPEED = 400.0
+@export var JUMP_VELOCITY = -450.0
+@export var DOUBLE_JUMP_VELOCITY = -550.0
+
+var double_jump = true
+var coin = 0
+var total_coins = 0
+
+@onready var coins_group = get_tree().get_nodes_in_group(\"coins\")
+
+@onready var global = get_node(\"/root/Global\")
+
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
+var can_contol : bool = true
+
+func _ready():
+	global.coin = 0
+	global.lives = 3
+	@warning_ignore(\"shadowed_variable\")
+	for coin in coins_group:
+		total_coins += 1
+
+
+func _physics_process(delta):
+	if not can_contol: return
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y += gravity * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+	elif Input.is_action_just_pressed(\"ui_accept\") and double_jump:
+		velocity.y = DOUBLE_JUMP_VELOCITY
+		double_jump = false
+		
+	if is_on_floor() and not double_jump:
+		double_jump = true
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction = Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction:
+		velocity.x = direction * SPEED
+		$AnimatedSprite2D.scale.x = direction
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+	
+			
+func _death(area):
+	if area.has_meta(\"spike\"):
+		if global.lives > 0:
+			position = Vector2(560, 337)
+			global.lives -= 1
+		else:
+			get_tree().reload_current_scene()
+		
+
+func _coin(area):
+	if area.has_meta(\"coin\"):
+		global.coin += 1
+		print(global.coin)
+		
+		
+func _win(area):
+	if area.has_meta(\"door\"):
+		if total_coins == global.coin:
+			get_tree().change_scene_to_file(\"res://win.tscn\")
+func handle_danger() -> void:
+	print(\"Player Died!\")
+	visible= false
+	can_contol = false
+	
+	await get_tree().create_timer(1).timeout
+	reset_player()
+	
+func reset_player() -> void:
+	#global_position = LevelManager.loaded_level.level_start_pos.global_position
+	visible = true
+	#can_control = true
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_scsro"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_615u7"]
+size = Vector2(21, 29)
+
+[sub_resource type="Gradient" id="Gradient_w4iai"]
+offsets = PackedFloat32Array(0, 0.318182, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.918831, 0.918831, 0.918831, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ky5kb"]
+gradient = SubResource("Gradient_w4iai")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.511468, 0.479358)
+fill_to = Vector2(0.766055, 0.885321)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h68eo"]
+atlas = ExtResource("1_jgult")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4ty1"]
+atlas = ExtResource("1_jgult")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgjpi"]
+atlas = ExtResource("1_jgult")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2fgv"]
+atlas = ExtResource("1_jgult")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pac2e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h68eo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4ty1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgjpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2fgv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = SubResource("GDScript_ij7rk")
+metadata/player = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.141176, 0.529412, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_scsro")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.6, 1.6)
+position_smoothing_enabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_615u7")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ky5kb")
+texture_scale = 1.6
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5.96046e-08, 1.5)
+scale = Vector2(0.875, 0.90625)
+sprite_frames = SubResource("SpriteFrames_pac2e")
+frame = 2
+frame_progress = 0.400948
+
+[connection signal="area_entered" from="Area2D" to="." method="_death"]
+[connection signal="area_entered" from="Area2D" to="." method="_coin"]
+[connection signal="area_entered" from="Area2D" to="." method="_win"]

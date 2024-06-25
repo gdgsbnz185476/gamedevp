@@ -11,3 +11,7 @@ func _ready():
 func _process(delta):
 	$coins.text = ("Coins: " + str(global.coin))
 	$lives.text = ("Lives: " + str(global.lives))
+
+
+func _on_area_2d_6_body_entered(body):
+	pass # Replace with function body.

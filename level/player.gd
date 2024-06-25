@@ -56,7 +56,12 @@ func _physics_process(delta):
 	move_and_slide()
 	
 			
+			
 func _death(area):
+	var can_control: bool = true
+	onready var death_node = $Death_node  # Adjust the path to your death node
+
+   
 	if area.has_meta("spike"):
 		if global.lives > 0:
 			position = Vector2(560, 337)
@@ -85,9 +90,11 @@ func handle_danger() -> void:
 	reset_player()
 	
 func reset_player() -> void:
-	global_position = LavelManager.loaded_level.level_start_pos.global_position
+	# Set the player's position to the death node's position
+	
+	global_position = death_node.global_position
 	visible = true
-	can_control = true
+	can_contol = true
 	
 	
 	
