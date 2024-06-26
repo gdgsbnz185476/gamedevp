@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://cdb0fik4lmvx5"]
+[gd_scene load_steps=18 format=3 uid="uid://cdb0fik4lmvx5"]
 
 [ext_resource type="PackedScene" uid="uid://dtquw4g4gj8lh" path="res://player_scene.tscn" id="1_mitlo"]
 [ext_resource type="Script" path="res://level/ui.gd" id="1_myfsf"]
 [ext_resource type="PackedScene" uid="uid://bjnsibstmthbu" path="res://coin.tscn" id="2_f80ui"]
+[ext_resource type="Script" path="res://level/player.gd" id="3_3p8dc"]
 [ext_resource type="PackedScene" uid="uid://c6hqil4v8kb4l" path="res://spike.tscn" id="4_rcvuq"]
 [ext_resource type="Texture2D" uid="uid://2ou1e46mh487" path="res://kinematic.png" id="5_aqt72"]
 [ext_resource type="PackedScene" uid="uid://behquhi28q1xn" path="res://door.tscn" id="6_ycpna"]
@@ -3061,7 +3062,7 @@ text = "Lives: 3"
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_mitlo")]
 position = Vector2(174, 374)
-script = null
+script = ExtResource("3_3p8dc")
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
 visible = false
@@ -3178,12 +3179,14 @@ position = Vector2(1126, 408)
 position = Vector2(1126, 388)
 
 [node name="Control" parent="." instance=ExtResource("9_cx0by")]
+visible = false
 offset_left = 1311.0
 offset_top = 407.0
 offset_right = 1311.0
 offset_bottom = 407.0
 
 [node name="Control2" parent="." instance=ExtResource("9_cx0by")]
+visible = false
 offset_left = 1248.0
 offset_top = 433.0
 offset_right = 1248.0

@@ -28,7 +28,8 @@ func _ready():
 
 
 func _physics_process(delta):
-	if not can_contol: return
+	print("WORKING")
+	#if not can_contol: return
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -59,7 +60,7 @@ func _physics_process(delta):
 			
 func _death(area):
 	var can_control: bool = true
-	onready var death_node = $Death_node  # Adjust the path to your death node
+	#onready var death_node = $Death_node  # Adjust the path to your death node
 
    
 	if area.has_meta("spike"):
@@ -92,7 +93,7 @@ func handle_danger() -> void:
 func reset_player() -> void:
 	# Set the player's position to the death node's position
 	
-	global_position = death_node.global_position
+	#global_position =death_node.global_position
 	visible = true
 	can_contol = true
 	

@@ -13,3 +13,5 @@ res://spike.tscn
 res://win.tscn
 res://level/ui.gd
 res://door.tscn
+res://level/win.gd
+res://level/player_scene.tscn
