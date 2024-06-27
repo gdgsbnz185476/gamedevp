@@ -153,7 +153,6 @@ JUMP_VELOCITY = null
 DOUBLE_JUMP_VELOCITY = null
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 offset_left = -10.0
 offset_top = -10.0
 offset_right = 10.0
@@ -174,7 +173,6 @@ position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_615u7")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-visible = false
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_ky5kb")
 texture_scale = 1.6
@@ -187,5 +185,5 @@ frame = 2
 frame_progress = 0.400948
 
 [connection signal="area_entered" from="Area2D" to="." method="_death"]
-[connection signal="area_entered" from="Area2D" to="." method="_coin"]
 [connection signal="area_entered" from="Area2D" to="." method="_win"]
+[connection signal="area_entered" from="Area2D" to="." method="_coin"]

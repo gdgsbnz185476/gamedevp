@@ -1,17 +1,5 @@
 res://level.tscn
-res://Area2D.gd
-res://player_scene.tscn
-res://TileMap.gd
-res://scene/obstacles /danger_zone.gd
-res://level/level.gd
-res://player.gd
-res://level/danger_zone.tscn
 res://level/player.gd
-res://coin.tscn
-res://level/platform.tscn
-res://spike.tscn
-res://win.tscn
-res://level/ui.gd
 res://door.tscn
-res://level/win.gd
+res://player_scene.tscn
 res://level/player_scene.tscn

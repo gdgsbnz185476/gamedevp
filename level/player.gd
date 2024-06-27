@@ -22,14 +22,14 @@ var can_contol : bool = true
 func _ready():
 	global.coin = 0
 	global.lives = 3
-	@warning_ignore("shadowed_variable")
+	("shadowed_variable")
 	for coin in coins_group:
 		total_coins += 1
 
 
 func _physics_process(delta):
 	print("WORKING")
-	#if not can_contol: return
+	if not can_contol: return
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -97,11 +97,5 @@ func reset_player() -> void:
 	visible = true
 	can_contol = true
 	
-	
-	
-	
-		
-		
-	
-	
-	
+func _on_area_2d_6_body_entered(body):
+	pass # Replace with function body.

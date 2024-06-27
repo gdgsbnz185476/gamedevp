@@ -3065,7 +3065,6 @@ position = Vector2(174, 374)
 script = ExtResource("3_3p8dc")
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
-visible = false
 anchor_mode = 0
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
@@ -3088,7 +3087,6 @@ layer_1/tile_data = PackedInt32Array(2293784, 65538, 0, 2359320, 2, 0, 2359321, 
 metadata/death = false
 
 [node name="Area2D" type="Area2D" parent="TileMap"]
-visible = false
 script = SubResource("GDScript_a15sj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Area2D"]
@@ -3179,14 +3177,12 @@ position = Vector2(1126, 408)
 position = Vector2(1126, 388)
 
 [node name="Control" parent="." instance=ExtResource("9_cx0by")]
-visible = false
 offset_left = 1311.0
 offset_top = 407.0
 offset_right = 1311.0
 offset_bottom = 407.0
 
 [node name="Control2" parent="." instance=ExtResource("9_cx0by")]
-visible = false
 offset_left = 1248.0
 offset_top = 433.0
 offset_right = 1248.0
