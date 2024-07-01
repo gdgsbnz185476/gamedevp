@@ -1,9 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://cdb0fik4lmvx5"]
+[gd_scene load_steps=17 format=3 uid="uid://cdb0fik4lmvx5"]
 
 [ext_resource type="PackedScene" uid="uid://dtquw4g4gj8lh" path="res://player_scene.tscn" id="1_mitlo"]
 [ext_resource type="Script" path="res://level/ui.gd" id="1_myfsf"]
 [ext_resource type="PackedScene" uid="uid://bjnsibstmthbu" path="res://coin.tscn" id="2_f80ui"]
-[ext_resource type="Script" path="res://level/player.gd" id="3_3p8dc"]
 [ext_resource type="PackedScene" uid="uid://c6hqil4v8kb4l" path="res://spike.tscn" id="4_rcvuq"]
 [ext_resource type="Texture2D" uid="uid://2ou1e46mh487" path="res://kinematic.png" id="5_aqt72"]
 [ext_resource type="PackedScene" uid="uid://behquhi28q1xn" path="res://door.tscn" id="6_ycpna"]
@@ -25,6 +24,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_area_2d_7_body_entered(body):
+	pass # Replace with function body.
 "
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l46xl"]
@@ -3061,8 +3064,11 @@ offset_bottom = 75.0
 text = "Lives: 3"
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_mitlo")]
-position = Vector2(174, 374)
-script = ExtResource("3_3p8dc")
+position = Vector2(186, 441)
+level_id = null
+SPEED = null
+JUMP_VELOCITY = null
+DOUBLE_JUMP_VELOCITY = null
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
 anchor_mode = 0
@@ -3072,7 +3078,8 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="Area2D7" parent="." instance=ExtResource("6_ycpna")]
-position = Vector2(1254, 419)
+position = Vector2(1256, 357)
+scale = Vector2(1, 0.873007)
 
 [node name="TileMap" type="TileMap" parent="."]
 show_behind_parent = true
@@ -3097,7 +3104,7 @@ shape = SubResource("RectangleShape2D_4618u")
 color = Color(0.675399, 0.661604, 0.676678, 1)
 
 [node name="DangerZone" parent="." instance=ExtResource("8_22dtr")]
-position = Vector2(-525, 682)
+position = Vector2(-510, 692)
 scale = Vector2(1.65251, -1.08833)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("8_cox3k")]
@@ -3110,22 +3117,22 @@ position = Vector2(1017, 484)
 position = Vector2(1692, 485)
 
 [node name="Area2D" parent="." instance=ExtResource("2_f80ui")]
-position = Vector2(510, 377)
+position = Vector2(508, 373)
 
 [node name="Area2D2" parent="." instance=ExtResource("2_f80ui")]
-position = Vector2(653, 341)
+position = Vector2(652, 354)
 
 [node name="Area2D3" parent="." instance=ExtResource("2_f80ui")]
-position = Vector2(822, 359)
+position = Vector2(822, 350)
 
 [node name="Area2D4" parent="." instance=ExtResource("2_f80ui")]
-position = Vector2(998, 271)
+position = Vector2(990, 246)
 
 [node name="Area2D5" parent="." instance=ExtResource("2_f80ui")]
-position = Vector2(1101, 451)
+position = Vector2(1090, 449)
 
 [node name="Area2D6" parent="." instance=ExtResource("6_ycpna")]
-position = Vector2(1254, 419)
+position = Vector2(1256, 358)
 scale = Vector2(1.05461, 0.922662)
 
 [node name="Area2D8" parent="." instance=ExtResource("4_rcvuq")]
@@ -3177,15 +3184,12 @@ position = Vector2(1126, 408)
 position = Vector2(1126, 388)
 
 [node name="Control" parent="." instance=ExtResource("9_cx0by")]
-offset_left = 1311.0
-offset_top = 407.0
-offset_right = 1311.0
-offset_bottom = 407.0
+offset_left = 389.0
+offset_top = 384.0
+offset_right = 389.0
+offset_bottom = 384.0
 
-[node name="Control2" parent="." instance=ExtResource("9_cx0by")]
-offset_left = 1248.0
-offset_top = 433.0
-offset_right = 1248.0
-offset_bottom = 433.0
-
+[connection signal="body_entered" from="Area2D7" to="." method="_on_area_2d_7_body_entered"]
+[connection signal="body_entered" from="Area2D6" to="." method="_on_area_2d_6_body_entered"]
 [connection signal="body_entered" from="Area2D6" to="CanvasLayer" method="_on_area_2d_6_body_entered"]
+[connection signal="hidden" from="Control" to="CanvasLayer" method="_on_control_hidden"]

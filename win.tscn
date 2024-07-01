@@ -14,10 +14,10 @@ script = ExtResource("1_44a0f")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 425.0
-offset_top = 107.0
-offset_right = 722.0
-offset_bottom = 206.0
+offset_left = 439.0
+offset_top = 81.0
+offset_right = 736.0
+offset_bottom = 180.0
 theme_override_font_sizes/font_size = 72
 text = "You win!"
 

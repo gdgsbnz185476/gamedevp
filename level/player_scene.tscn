@@ -26,7 +26,6 @@ var can_contol : bool = true
 func _ready():
 	global.coin = 0
 	global.lives = 3
-	@warning_ignore(\"shadowed_variable\")
 	for coin in coins_group:
 		total_coins += 1
 
@@ -87,9 +86,9 @@ func handle_danger() -> void:
 	reset_player()
 	
 func reset_player() -> void:
-	global_position = level.loaded_level.level_start_pos.global_position
+	#global_position = level.loaded_level.level_start_pos.global_position
 	visible = true
-	can_control = true
+#can_control = true
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_scsro"]
@@ -147,10 +146,6 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = SubResource("GDScript_ij7rk")
-level_id = null
-SPEED = null
-JUMP_VELOCITY = null
-DOUBLE_JUMP_VELOCITY = null
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -10.0

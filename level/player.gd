@@ -7,29 +7,30 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY = -450.0
 @export var DOUBLE_JUMP_VELOCITY = -550.0
 
+var spawn_point
 var double_jump = true
-var coin = 0
+var coin = 0 
 var total_coins = 0
 
 @onready var coins_group = get_tree().get_nodes_in_group("coins")
-
 @onready var global = get_node("/root/Global")
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var can_contol : bool = true
+var can_control = true
 
 func _ready():
 	global.coin = 0
 	global.lives = 3
-	("shadowed_variable")
+	spawn_point = position
 	for coin in coins_group:
 		total_coins += 1
 
+	# Connect Area2D signal
+	$Area2D.connect("body_entered", self, "_on_body_entered")
 
 func _physics_process(delta):
-	print("WORKING")
-	if not can_contol: return
+	if not can_control: return
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -55,47 +56,47 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-	
-			
-			
-func _death(area):
-	var can_control: bool = true
-	#onready var death_node = $Death_node  # Adjust the path to your death node
 
-   
+func _death(area):
+	$reset_timer.start(0.10)
+
 	if area.has_meta("spike"):
 		if global.lives > 0:
-			position = Vector2(560, 337)
+			position = spawn_point
 			global.lives -= 1
+			can_control = false
+			visible = false
 		else:
 			get_tree().reload_current_scene()
-		
 
 func _coin(area):
 	if area.has_meta("coin"):
 		global.coin += 1
 		print(global.coin)
-		
-		
+
 func _win(area):
 	if area.has_meta("door"):
+		print("Player at door")
 		if total_coins == global.coin:
-			get_tree().change_scene_to_file("res://win.tscn")
+			print("Win condition met")
+			show_win_screen()
+		else:
+			print("Not enough coins")
+
+func show_win_screen():
+	print("Changing scene to win screen")
+	get_tree().change_scene_to_file("res://win.tscn")
 
 func handle_danger() -> void:
 	print("Player Died!")
-	visible= false
-	can_contol = false
-	
-	await get_tree().create_timer(1).timeout
-	reset_player()
-	
-func reset_player() -> void:
-	# Set the player's position to the death node's position
-	
-	#global_position =death_node.global_position
+	visible = false
+	can_control = false
+	$reset_timer.start(0.10)
+
+func reset_player():
 	visible = true
-	can_contol = true
-	
-func _on_area_2d_6_body_entered(body):
-	pass # Replace with function body.
+	can_control = true
+
+func _on_body_entered(body):
+	if body.is_in_group("player"):  # Ensure only the player triggers this
+		_win(self)
