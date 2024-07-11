@@ -26,9 +26,6 @@ func _ready():
 	for coin in coins_group:
 		total_coins += 1
 
-	# Connect Area2D signal
-	$Area2D.connect("body_entered", self, "_on_body_entered")
-
 func _physics_process(delta):
 	if not can_control: return
 	
@@ -58,7 +55,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _death(area):
-	$reset_timer.start(0.10)
+	$reset_timer.start(0.0)
 
 	if area.has_meta("spike"):
 		if global.lives > 0:
@@ -72,31 +69,26 @@ func _death(area):
 func _coin(area):
 	if area.has_meta("coin"):
 		global.coin += 1
+		area.queue_free()
 		print(global.coin)
 
 func _win(area):
 	if area.has_meta("door"):
-		print("Player at door")
 		if total_coins == global.coin:
-			print("Win condition met")
 			show_win_screen()
-		else:
-			print("Not enough coins")
 
 func show_win_screen():
-	print("Changing scene to win screen")
 	get_tree().change_scene_to_file("res://win.tscn")
 
 func handle_danger() -> void:
 	print("Player Died!")
 	visible = false
 	can_control = false
-	$reset_timer.start(0.10)
+	$reset_timer.start(0.0)
 
 func reset_player():
 	visible = true
 	can_control = true
 
-func _on_body_entered(body):
-	if body.is_in_group("player"):  # Ensure only the player triggers this
-		_win(self)
+func _on_area_2d_6_body_entered(body):
+	pass # Replace with function body.

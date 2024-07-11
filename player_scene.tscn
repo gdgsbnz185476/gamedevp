@@ -61,6 +61,7 @@ script = ExtResource("1_ht407")
 metadata/player = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -10.0
 offset_top = -10.0
 offset_right = 10.0
@@ -68,6 +69,7 @@ offset_bottom = 10.0
 color = Color(0.141176, 0.529412, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_scsro")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -86,7 +88,7 @@ texture = SubResource("GradientTexture2D_ky5kb")
 texture_scale = 1.6
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-5.96046e-08, 1.5)
+position = Vector2(2.27374e-13, 0)
 scale = Vector2(0.875, 0.90625)
 sprite_frames = SubResource("SpriteFrames_pac2e")
 frame = 2
@@ -96,7 +98,7 @@ frame_progress = 0.400948
 wait_time = 2.126
 one_shot = true
 
-[connection signal="area_entered" from="Area2D" to="." method="_death"]
 [connection signal="area_entered" from="Area2D" to="." method="_win"]
 [connection signal="area_entered" from="Area2D" to="." method="_coin"]
+[connection signal="area_entered" from="Area2D" to="." method="_death"]
 [connection signal="timeout" from="reset_timer" to="." method="reset_player"]

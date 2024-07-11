@@ -28,4 +28,5 @@ offset_right = 674.0
 offset_bottom = 314.0
 text = "Play again?"
 
+[connection signal="hidden" from="." to="." method="Door"]
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_replay"]

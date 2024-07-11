@@ -1,15 +1,11 @@
 res://level.tscn
 res://level/player.gd
-res://door.tscn
-res://player_scene.tscn
-res://level/player_scene.tscn
-res://win.tscn
 res://level/win.gd
-res://level/ui.gd
 res://scene/obstacles /danger_zone.gd
-res://spike.tscn
+res://win.tscn
 res://coin.tscn
-res://level/danger_zone.tscn
-res://level/platform.tscn
+res://door.tscn
+res://spike.tscn
+res://player_scene.tscn
 res://level/coin.gd
-res://level/god.gd
+res://level/platform.tscn
