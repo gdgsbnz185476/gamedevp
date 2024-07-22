@@ -3103,10 +3103,10 @@ scale = Vector2(1.65251, -1.08833)
 position = Vector2(340.267, 482.97)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("8_cox3k")]
-position = Vector2(1017, 484)
+position = Vector2(1013, 483)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("8_cox3k")]
-position = Vector2(1655.27, 485.471)
+position = Vector2(1656, 483)
 
 [node name="Area2D" parent="." instance=ExtResource("2_f80ui")]
 position = Vector2(508, 373)
@@ -3174,11 +3174,30 @@ position = Vector2(1141, 428)
 position = Vector2(1126, 408)
 
 [node name="Area2D21" parent="." instance=ExtResource("4_rcvuq")]
-position = Vector2(1126, 388)
+position = Vector2(1124, 386)
+scale = Vector2(14.1132, 0.443353)
 
 [node name="Area2D6" parent="." instance=ExtResource("6_ycpna")]
-position = Vector2(1325.27, 41.0955)
+position = Vector2(1820, 324)
+rotation = 0.885448
+scale = Vector2(1, 3.32)
 
 [node name="Area2D7" parent="." instance=ExtResource("4_rcvuq")]
 position = Vector2(1032, 183)
 scale = Vector2(1.33625, 3.23908)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("8_cox3k")]
+position = Vector2(1192, 128)
+scale = Vector2(0.2, 1)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("8_cox3k")]
+position = Vector2(1483, -39)
+
+[node name="Area2D22" parent="." instance=ExtResource("2_f80ui")]
+position = Vector2(1186, 52)
+
+[node name="Area2D23" parent="." instance=ExtResource("2_f80ui")]
+position = Vector2(1232, -90)
+
+[node name="Area2D24" parent="." instance=ExtResource("2_f80ui")]
+position = Vector2(1848, -45)

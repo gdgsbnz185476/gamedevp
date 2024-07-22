@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://df68stm3lijwo"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 1154.0
+offset_bottom = 645.0
+text = "MENU"
+uppercase = true
+visible_characters = 4
+visible_characters_behavior = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Label"]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 63.0
+offset_right = 687.0
+offset_bottom = 178.0
+text = "Level"
+
+[node name="Button" type="Button" parent="CanvasLayer/Label/Button"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 162.0
+offset_right = 336.0
+offset_bottom = 275.0
+text = "Settings"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 381.0
+offset_right = 688.0
+offset_bottom = 495.0
+text = "Links"

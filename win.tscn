@@ -28,5 +28,12 @@ offset_right = 674.0
 offset_bottom = 314.0
 text = "Play again?"
 
+[node name="Button" type="Button" parent="CanvasLayer/Button"]
+offset_top = 113.0
+offset_right = 186.0
+offset_bottom = 172.0
+text = "Menu "
+
 [connection signal="hidden" from="." to="." method="Door"]
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_replay"]
+[connection signal="pressed" from="CanvasLayer/Button/Button" to="." method="_replay"]

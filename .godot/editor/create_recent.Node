@@ -1,3 +1,8 @@
+Button
+LinkButton
+Label
+CanvasLayer
+Control
 Timer
 CollisionShape2D
 Area2D

@@ -7,5 +7,6 @@ res://coin.tscn
 res://door.tscn
 res://spike.tscn
 res://player_scene.tscn
-res://level/coin.gd
 res://level/platform.tscn
+res://Menu.gd
+res://Menu.tscn
