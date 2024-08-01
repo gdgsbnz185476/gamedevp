@@ -1,10 +1,13 @@
-[gd_scene format=3 uid="uid://df68stm3lijwo"]
+[gd_scene load_steps=2 format=3 uid="uid://df68stm3lijwo"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_ych60"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_ych60")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -39,3 +42,5 @@ offset_top = 381.0
 offset_right = 688.0
 offset_bottom = 495.0
 text = "Links"
+
+[connection signal="visibility_changed" from="." to="." method="_on_button_2_pressed"]

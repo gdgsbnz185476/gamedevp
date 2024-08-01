@@ -14,5 +14,13 @@ func _on_visibility_changed():
 func _replay():
 	get_tree().change_scene_to_file("res://level.tscn")
 
+
+
+func Menu():
+	pass # Replace with function body.
+
+func _on_button2_2_pressed():
+	$CanvasLayer.show()
+
 func _Menu():
 	get_tree().change_scene_to_file("res://Menu.tscn")
