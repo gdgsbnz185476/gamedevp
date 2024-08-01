@@ -10,3 +10,5 @@ res://player_scene.tscn
 res://level/platform.tscn
 res://Menu.gd
 res://Menu.tscn
+res://The begening.tscn
+res://The begening/platform.tscn

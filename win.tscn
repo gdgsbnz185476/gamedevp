@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://8ujvjc0u8neu"]
 
-[ext_resource type="Script" path="res://level/win.gd" id="1_44a0f"]
+[ext_resource type="Script" path="res://The begening/win.gd" id="1_44a0f"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

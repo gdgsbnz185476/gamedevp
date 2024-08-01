@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="12DT2-1 Intro"
-run/main_scene="res://level.tscn"
+run/main_scene="res://The begening.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://level/global.gd"
+Global="*res://The begening/global.gd"
 
 [display]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dtquw4g4gj8lh"]
 
-[ext_resource type="Script" path="res://level/player.gd" id="1_ht407"]
+[ext_resource type="Script" path="res://The begening/player.gd" id="1_ht407"]
 [ext_resource type="Texture2D" uid="uid://cu3nj2x76bva8" path="res://Idle-Sheet.png" id="1_jgult"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_scsro"]

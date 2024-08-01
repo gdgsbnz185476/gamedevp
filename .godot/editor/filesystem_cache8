@@ -1,29 +1,31 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721189735
-coin.tscn::PackedScene::3046064460669098762::1720602161::0::1::::<><>::res://level/coin.gd
-door.tscn::PackedScene::2682634271579411955::1720602161::0::1::::<><>::
+::res://::1722548356
+coin.tscn::PackedScene::3046064460669098762::1722548334::0::1::::<><>::res://The begening/coin.gd
+door.tscn::PackedScene::2682634271579411955::1722547262::0::1::::<><>::
 icon.svg::CompressedTexture2D::4186416440454604828::1710811437::1718587886::1::::<><>::
 Idle-Sheet.png::CompressedTexture2D::6235227665468010669::1666649110::1718587886::1::::<><>::
 kinematic.png::CompressedTexture2D::1925261093598140430::1674515326::1719283291::1::::<><>::
-level.tscn::PackedScene::4986999566810714160::1720602161::0::1::::<><>::uid://dtquw4g4gj8lh::::res://player_scene.tscn<>res://level/ui.gd<>uid://bjnsibstmthbu::::res://coin.tscn<>uid://c6hqil4v8kb4l::::res://spike.tscn<>uid://2ou1e46mh487::::res://kinematic.png<>uid://behquhi28q1xn::::res://door.tscn<>uid://b4vf1a53dc046::::res://TileMap.png<>uid://2fejn5utanrg::::res://level/danger_zone.tscn<>uid://c3k2jha0i2csv::::res://level/platform.tscn
-player_scene.tscn::PackedScene::8527135285360130121::1720602161::0::1::::<><>::res://level/player.gd<>uid://cu3nj2x76bva8::::res://Idle-Sheet.png
-spike.tscn::PackedScene::6964132546233944873::1720602161::0::1::::<><>::
+Menu.gd::GDScript::-1::1722547143::0::1::::<>Control<>::
+Menu.tscn::PackedScene::7576238802465422478::1722547262::0::1::::<><>::res://Menu.gd
+player_scene.tscn::PackedScene::8527135285360130121::1722548334::0::1::::<><>::res://The begening/player.gd<>uid://cu3nj2x76bva8::::res://Idle-Sheet.png
+spike.tscn::PackedScene::6964132546233944873::1722547262::0::1::::<><>::
+the.tscn::PackedScene::4986999566810714160::1722548334::0::1::::<><>::uid://dtquw4g4gj8lh::::res://player_scene.tscn<>res://The begening/ui.gd<>uid://bjnsibstmthbu::::res://coin.tscn<>uid://c6hqil4v8kb4l::::res://spike.tscn<>uid://2ou1e46mh487::::res://kinematic.png<>uid://behquhi28q1xn::::res://door.tscn<>uid://b4vf1a53dc046::::res://TileMap.png<>uid://2fejn5utanrg::::res://The begening/danger_zone.tscn<>uid://c3k2jha0i2csv::::res://The begening/platform.tscn
 TileMap.png::CompressedTexture2D::4465599145257096989::1712262343::1718587886::1::::<><>::
-win.tscn::PackedScene::2358103826706849848::1720602161::0::1::::<><>::res://level/win.gd
-::res://level/::1720602161
+win.tscn::PackedScene::2358103826706849848::1722548334::0::1::::<><>::res://The begening/win.gd
+::res://scene/::1718917721
+::res://scene/obstacles /::1721609650
+danger_zone.gd::GDScript::-1::1721609650::0::1::::<>Area2D<>::
+danger_zone.tscn::PackedScene::5139799783208197700::1719283102::0::1::::<><>::res://scene/obstacles /danger_zone.gd
+::res://The begening/::1722548316
 coin.gd::GDScript::-1::1719888066::0::1::::<>Area2D<>::
 danger_zone.tscn::PackedScene::1905680337195181996::1719796734::0::1::::<><>::res://scene/obstacles /danger_zone.gd
 global.gd::GDScript::-1::1711486238::0::1::::<>Node<>::
 god.gd::GDScript::-1::1719802735::0::1::::<>AnimationPlayer<>::
 level.gd::GDScript::-1::1719441003::0::1::::Level<>Node<>::
 movement.gd::GDScript::-1::1718585637::0::1::::<>Camera2D<>::
-platform.tscn::PackedScene::6760428566552636665::1720602161::0::1::::<><>::
-player.gd::GDScript::-1::1719888391::0::1::::Player<>CharacterBody2D<>::
+platform.tscn::PackedScene::6760428566552636665::1722547262::0::1::::<><>::
+player.gd::GDScript::-1::1722546884::0::1::::Player<>CharacterBody2D<>::
 player_scene.tscn::PackedScene::2768790062264044988::1719794562::0::1::::<><>::uid://cu3nj2x76bva8::::res://Idle-Sheet.png
 TileMap.gd::GDScript::-1::1718919921::0::1::::<>TileMap<>::
 ui.gd::GDScript::-1::1719797439::0::1::::<>CanvasLayer<>::
-win.gd::GDScript::-1::1719888152::0::1::::<>Control<>::
-::res://scene/::1718917721
-::res://scene/obstacles /::1719886603
-danger_zone.gd::GDScript::-1::1719886603::0::1::::<>Area2D<>::
-danger_zone.tscn::PackedScene::5139799783208197700::1719283102::0::1::::<><>::res://scene/obstacles /danger_zone.gd
+win.gd::GDScript::-1::1722547257::0::1::::<>Control<>::

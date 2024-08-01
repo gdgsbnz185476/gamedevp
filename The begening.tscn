@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://cdb0fik4lmvx5"]
 
-[ext_resource type="PackedScene" uid="uid://dtquw4g4gj8lh" path="res://player_scene.tscn" id="1_mitlo"]
-[ext_resource type="Script" path="res://level/ui.gd" id="1_myfsf"]
-[ext_resource type="PackedScene" uid="uid://bjnsibstmthbu" path="res://coin.tscn" id="2_f80ui"]
-[ext_resource type="PackedScene" uid="uid://c6hqil4v8kb4l" path="res://spike.tscn" id="4_rcvuq"]
-[ext_resource type="Texture2D" uid="uid://2ou1e46mh487" path="res://kinematic.png" id="5_aqt72"]
-[ext_resource type="PackedScene" uid="uid://behquhi28q1xn" path="res://door.tscn" id="6_ycpna"]
-[ext_resource type="Texture2D" uid="uid://b4vf1a53dc046" path="res://TileMap.png" id="7_cxffg"]
-[ext_resource type="PackedScene" uid="uid://2fejn5utanrg" path="res://level/danger_zone.tscn" id="8_22dtr"]
-[ext_resource type="PackedScene" uid="uid://c3k2jha0i2csv" path="res://level/platform.tscn" id="8_cox3k"]
+[ext_resource type="Script" path="res://The begening/ui.gd" id="1_i2eh0"]
+[ext_resource type="PackedScene" uid="uid://dtquw4g4gj8lh" path="res://player_scene.tscn" id="2_fabp1"]
+[ext_resource type="Texture2D" uid="uid://2ou1e46mh487" path="res://kinematic.png" id="3_8jxni"]
+[ext_resource type="Texture2D" uid="uid://b4vf1a53dc046" path="res://TileMap.png" id="4_1liu5"]
+[ext_resource type="PackedScene" uid="uid://2fejn5utanrg" path="res://The begening/danger_zone.tscn" id="5_jng6u"]
+[ext_resource type="PackedScene" uid="uid://c3k2jha0i2csv" path="res://The begening/platform.tscn" id="6_qs7c3"]
+[ext_resource type="PackedScene" uid="uid://bjnsibstmthbu" path="res://coin.tscn" id="7_dvbaq"]
+[ext_resource type="PackedScene" uid="uid://c6hqil4v8kb4l" path="res://spike.tscn" id="8_b5bcy"]
+[ext_resource type="PackedScene" uid="uid://behquhi28q1xn" path="res://door.tscn" id="9_oitps"]
 
 [sub_resource type="GDScript" id="GDScript_btppp"]
 resource_name = "level_data"
@@ -31,7 +31,7 @@ func _on_area_2d_7_body_entered(body):
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l46xl"]
 resource_name = "backgroung"
-texture = ExtResource("5_aqt72")
+texture = ExtResource("3_8jxni")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -3005,7 +3005,7 @@ texture = ExtResource("5_aqt72")
 32:29/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tu7wl"]
-texture = ExtResource("7_cxffg")
+texture = ExtResource("4_1liu5")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -3046,7 +3046,7 @@ size = Vector2(2643.62, 78)
 script = SubResource("GDScript_btppp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource("1_myfsf")
+script = ExtResource("1_i2eh0")
 
 [node name="coins" type="Label" parent="CanvasLayer"]
 offset_left = 22.0
@@ -3062,7 +3062,7 @@ offset_right = 81.0
 offset_bottom = 75.0
 text = "Lives: 3"
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_mitlo")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_fabp1")]
 position = Vector2(187, 444)
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
@@ -3095,109 +3095,109 @@ shape = SubResource("RectangleShape2D_4618u")
 position = Vector2(37.7667, -362.655)
 color = Color(0.675399, 0.661604, 0.676678, 1)
 
-[node name="DangerZone" parent="." instance=ExtResource("8_22dtr")]
+[node name="DangerZone" parent="." instance=ExtResource("5_jng6u")]
 position = Vector2(-510, 692)
 scale = Vector2(1.65251, -1.08833)
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("8_cox3k")]
+[node name="StaticBody2D2" parent="." instance=ExtResource("6_qs7c3")]
 position = Vector2(340.267, 482.97)
 
-[node name="StaticBody2D" parent="." instance=ExtResource("8_cox3k")]
+[node name="StaticBody2D" parent="." instance=ExtResource("6_qs7c3")]
 position = Vector2(1013, 483)
 
-[node name="StaticBody2D3" parent="." instance=ExtResource("8_cox3k")]
+[node name="StaticBody2D3" parent="." instance=ExtResource("6_qs7c3")]
 position = Vector2(1656, 483)
 
-[node name="Area2D" parent="." instance=ExtResource("2_f80ui")]
+[node name="Area2D" parent="." instance=ExtResource("7_dvbaq")]
 position = Vector2(508, 373)
 
-[node name="Area2D2" parent="." instance=ExtResource("2_f80ui")]
+[node name="Area2D2" parent="." instance=ExtResource("7_dvbaq")]
 position = Vector2(652, 354)
 
-[node name="Area2D3" parent="." instance=ExtResource("2_f80ui")]
+[node name="Area2D3" parent="." instance=ExtResource("7_dvbaq")]
 position = Vector2(822, 350)
 
-[node name="Area2D4" parent="." instance=ExtResource("2_f80ui")]
+[node name="Area2D4" parent="." instance=ExtResource("7_dvbaq")]
 position = Vector2(989, 220)
 
-[node name="Area2D5" parent="." instance=ExtResource("2_f80ui")]
+[node name="Area2D5" parent="." instance=ExtResource("7_dvbaq")]
 position = Vector2(1090, 449)
 
-[node name="Area2D8" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D8" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(511, 449)
 
-[node name="Area2D9" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D9" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(511, 429)
 
-[node name="Area2D10" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D10" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(653, 448)
 
-[node name="Area2D11" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D11" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(642, 428)
 
-[node name="Area2D12" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D12" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(662, 428)
 
-[node name="Area2D13" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D13" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(632, 409)
 
-[node name="Area2D14" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D14" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(672, 408)
 
-[node name="Area2D15" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D15" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(823, 427)
 scale = Vector2(-1.65361, 2.91104)
 
-[node name="Area2D16" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D16" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(820, 300)
 scale = Vector2(2.90668, 0.92084)
 
-[node name="StaticBody2D5" parent="." instance=ExtResource("8_cox3k")]
+[node name="StaticBody2D5" parent="." instance=ExtResource("6_qs7c3")]
 position = Vector2(994, 336)
 scale = Vector2(-0.0449851, 0.507494)
 
-[node name="Area2D17" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D17" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(1082, 263)
 rotation = -0.833126
 scale = Vector2(8.51667, 1)
 
-[node name="Area2D17" parent="Area2D17" instance=ExtResource("4_rcvuq")]
+[node name="Area2D17" parent="Area2D17" instance=ExtResource("8_b5bcy")]
 position = Vector2(1034, 332)
 
-[node name="Area2D18" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D18" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(1158, 449)
 
-[node name="Area2D19" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D19" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(1141, 428)
 
-[node name="Area2D20" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D20" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(1126, 408)
 
-[node name="Area2D21" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D21" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(1124, 386)
 scale = Vector2(14.1132, 0.443353)
 
-[node name="Area2D6" parent="." instance=ExtResource("6_ycpna")]
+[node name="Area2D6" parent="." instance=ExtResource("9_oitps")]
 position = Vector2(1820, 324)
 rotation = 0.885448
 scale = Vector2(1, 3.32)
 
-[node name="Area2D7" parent="." instance=ExtResource("4_rcvuq")]
+[node name="Area2D7" parent="." instance=ExtResource("8_b5bcy")]
 position = Vector2(1032, 183)
 scale = Vector2(1.33625, 3.23908)
 
-[node name="StaticBody2D4" parent="." instance=ExtResource("8_cox3k")]
+[node name="StaticBody2D4" parent="." instance=ExtResource("6_qs7c3")]
 position = Vector2(1192, 128)
 scale = Vector2(0.2, 1)
 
-[node name="StaticBody2D6" parent="." instance=ExtResource("8_cox3k")]
+[node name="StaticBody2D6" parent="." instance=ExtResource("6_qs7c3")]
 position = Vector2(1483, -39)
 
-[node name="Area2D22" parent="." instance=ExtResource("2_f80ui")]
+[node name="Area2D22" parent="." instance=ExtResource("7_dvbaq")]
 position = Vector2(1186, 52)
 
-[node name="Area2D23" parent="." instance=ExtResource("2_f80ui")]
+[node name="Area2D23" parent="." instance=ExtResource("7_dvbaq")]
 position = Vector2(1232, -90)
 
-[node name="Area2D24" parent="." instance=ExtResource("2_f80ui")]
+[node name="Area2D24" parent="." instance=ExtResource("7_dvbaq")]
 position = Vector2(1848, -45)
