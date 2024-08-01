@@ -55,7 +55,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _death(area):
-	$reset_timer.start(0.10)
+	$reset_timer.start(0.010)
 
 	if area.has_meta("spike"):
 		if global.lives > 0:
@@ -79,18 +79,14 @@ func _win(area):
 func show_win_screen():
 	get_tree().change_scene_to_file("res://win.tscn")
 	
-func _Menu(area):
-	if area.has_meta("Menu"):
-		
-			show_Menu_screen()
-func show_Menu_screen():
+func _menu():
 	get_tree().change_scene_to_file("res://Menu.tscn")
 
 func handle_danger() -> void:
 	print("Player Died!")
 	visible = false
 	can_control = false
-	$reset_timer.start(0.10)
+	$reset_timer.start(0.010)
 
 func reset_player():
 	visible = true

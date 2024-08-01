@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://8ujvjc0u8neu"]
+[gd_scene load_steps=3 format=3 uid="uid://8ujvjc0u8neu"]
 
 [ext_resource type="Script" path="res://level/win.gd" id="1_44a0f"]
+[ext_resource type="Script" path="res://Menu.gd" id="2_6vasy"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -28,12 +29,15 @@ offset_right = 674.0
 offset_bottom = 314.0
 text = "Play again?"
 
-[node name="Button" type="Button" parent="CanvasLayer/Button"]
-offset_top = 113.0
-offset_right = 186.0
-offset_bottom = 172.0
+[node name="Button2" type="Button" parent="CanvasLayer"]
+offset_left = 488.0
+offset_top = 368.0
+offset_right = 674.0
+offset_bottom = 427.0
 text = "Menu "
+script = ExtResource("2_6vasy")
+metadata/Menu = true
 
 [connection signal="hidden" from="." to="." method="Door"]
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_replay"]
-[connection signal="pressed" from="CanvasLayer/Button/Button" to="." method="_replay"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button2" method="Menu"]
