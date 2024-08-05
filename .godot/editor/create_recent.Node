@@ -1,8 +1,12 @@
+TileMap
+CharacterBody2D
+ColorRect
+CollisionShape2D
+CanvasLayer
+Node2D
 Button
 LinkButton
 Label
-CanvasLayer
 Control
 Timer
-CollisionShape2D
 Area2D
