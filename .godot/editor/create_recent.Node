@@ -1,8 +1,9 @@
 Button
-LinkButton
+TileMap
 Label
+Area2D
 CanvasLayer
+CollisionShape2D
+LinkButton
 Control
 Timer
-CollisionShape2D
-Area2D

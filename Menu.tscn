@@ -43,4 +43,14 @@ offset_right = 688.0
 offset_bottom = 495.0
 text = "Links"
 
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 4.99999
+offset_top = 599.0
+offset_right = 140.0
+offset_bottom = 640.0
+rotation = -0.00842712
+text = "Back"
+metadata/back = true
+
 [connection signal="visibility_changed" from="." to="." method="_on_button_2_pressed"]

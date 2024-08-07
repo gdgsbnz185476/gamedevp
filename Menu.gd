@@ -12,3 +12,10 @@ func _Menu():
 
 func _on_button__pressed():
 	pass # Replace with function body.
+	
+
+func _on_button_2_pressed():
+	$CanvasLayer.show()
+	
+func _win():
+	get_tree().change_scene_to_file("res://win.tscn")
