@@ -3088,7 +3088,7 @@ metadata/death = false
 script = SubResource("GDScript_a15sj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Area2D"]
-position = Vector2(1238.81, 661)
+position = Vector2(1212, 590)
 shape = SubResource("RectangleShape2D_4618u")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
@@ -3096,11 +3096,11 @@ position = Vector2(37.7667, -362.655)
 color = Color(0.675399, 0.661604, 0.676678, 1)
 
 [node name="DangerZone" parent="." instance=ExtResource("5_jng6u")]
-position = Vector2(-510, 692)
+position = Vector2(-533, 639)
 scale = Vector2(1.65251, -1.08833)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("6_qs7c3")]
-position = Vector2(340.267, 482.97)
+position = Vector2(339, 482)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("6_qs7c3")]
 position = Vector2(1013, 483)

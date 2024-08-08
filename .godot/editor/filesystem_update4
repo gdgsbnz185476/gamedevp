@@ -7,3 +7,11 @@ res://l2/level 2.tscn
 res://Menu.tscn
 res://The begening.tscn
 res://coin.tscn
+res://The begening/danger_zone.tscn
+res://The begening/player.gd
+res://spikel2.tscn
+res://doorl2.tscn
+res://l2/l2platform.tscn
+res://The begening/platform.tscn
+res://player_scene.tscn
+res://l2/l2 patform circle.tscn

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://t4l4c0wrgt8s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_85mu8"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_85mu8")
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2D"]
+offset_left = -9.0
+offset_top = -10.0
+offset_right = 9.0
+offset_bottom = 8.0
+color = Color(1, 1, 1, 0)

@@ -86,7 +86,9 @@ func handle_danger() -> void:
 	print("Player Died!")
 	visible = false
 	can_control = false
-	$reset_timer.start(0.010)
+	position = spawn_point
+	global.lives -= 1
+	$reset_timer.start(0.10)
 
 func reset_player():
 	visible = true

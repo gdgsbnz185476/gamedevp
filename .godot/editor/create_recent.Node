@@ -1,9 +1,11 @@
+ColorRect
+CollisionShape2D
+StaticBody2D
 Button
 TileMap
 Label
 Area2D
 CanvasLayer
-CollisionShape2D
 LinkButton
 Control
 Timer

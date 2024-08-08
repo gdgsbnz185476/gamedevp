@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6hqil4v8kb4l"]
+[gd_scene load_steps=2 format=3 uid="uid://dkxdwesau2twt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_355nw"]
 
@@ -13,5 +13,5 @@ offset_left = -10.0
 offset_top = -10.0
 offset_right = 10.0
 offset_bottom = 10.0
-color = Color(0.829733, 0, 0.125775, 1)
+color = Color(0.543479, 0.0720714, 1, 1)
 metadata/_edit_use_anchors_ = true

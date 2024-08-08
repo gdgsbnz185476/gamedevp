@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://behquhi28q1xn"]
+[gd_scene load_steps=2 format=3 uid="uid://rdqydnxxcmdt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgrc5"]
 size = Vector2(40, 84)
@@ -16,5 +16,5 @@ color = Color(0.568627, 0.360784, 0.207843, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_cgrc5")
-debug_color = Color(0.433129, 0.460307, 0.995132, 0.419608)
+debug_color = Color(0.946588, 4.3492e-06, 0.594812, 0.419608)
 metadata/door = true
