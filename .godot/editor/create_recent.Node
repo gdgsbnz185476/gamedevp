@@ -1,11 +1,11 @@
+Button
+Label
+CanvasLayer
+Control
 ColorRect
 CollisionShape2D
 StaticBody2D
-Button
 TileMap
-Label
 Area2D
-CanvasLayer
 LinkButton
-Control
 Timer
