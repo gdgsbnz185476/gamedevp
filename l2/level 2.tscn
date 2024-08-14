@@ -3047,7 +3047,7 @@ text = "lives:
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(598, 329)
+position = Vector2(593, 327)
 shape = SubResource("RectangleShape2D_0vmkv")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -3218,7 +3218,7 @@ position = Vector2(1129, 514)
 position = Vector2(646, 639)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("7_2ex66")]
-position = Vector2(509, 26)
+position = Vector2(523, 46)
 
 [node name="Area2D54" parent="." instance=ExtResource("8_dbhot")]
 position = Vector2(680, 371)
