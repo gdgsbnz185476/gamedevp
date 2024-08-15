@@ -23,3 +23,8 @@ func _win():
 
 func _on_back_pressed():
 	get_tree().change_scene_to_file("res://win.tscn")
+
+
+
+func _on_Level_pressed():
+	get_tree().change_scene_to_file("res://level menu.tscn")

@@ -12,7 +12,7 @@ func _on_visibility_changed():
 	
 
 func _replay():
-	get_tree().change_scene_to_file("res://level.tscn")
+	get_tree().change_scene_to_file("res://The begening.tscn")
 
 
 
@@ -24,3 +24,7 @@ func _on_button2_2_pressed():
 
 func _Menu():
 	get_tree().change_scene_to_file("res://Menu.tscn")
+	
+
+func _level2():
+	get_tree().change_scene_to_file("res://level 2.tscn")

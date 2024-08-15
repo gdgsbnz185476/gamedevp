@@ -8,3 +8,5 @@ res://door.tscn
 res://l2/l2platform.tscn
 res://scene/obstacles /level menu.tscn
 res://scene/obstacles /level menu.gd
+res://The begening/win.gd
+res://l2/level2.tscn

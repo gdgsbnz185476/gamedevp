@@ -1,28 +1,30 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1723515564
+::res://::1723756423
 coin.tscn::PackedScene::3046064460669098762::1723152529::0::1::::<><>::res://The begening/coin.gd
-door.tscn::PackedScene::2682634271579411955::1723152529::0::1::::<><>::
+door.tscn::PackedScene::2682634271579411955::1723756423::0::1::::<><>::
 doorl2.tscn::PackedScene::1200417984775061705::1723151121::0::1::::<><>::
 icon.svg::CompressedTexture2D::4186416440454604828::1710811437::1718587886::1::::<><>::
 Idle-Sheet.png::CompressedTexture2D::6235227665468010669::1666649110::1718587886::1::::<><>::
 kinematic.png::CompressedTexture2D::1925261093598140430::1674515326::1719283291::1::::<><>::
-Menu.gd::GDScript::-1::1723150685::0::1::::<>Control<>::
-Menu.tscn::PackedScene::7576238802465422478::1723152528::0::1::::<><>::res://Menu.gd
+Menu.gd::GDScript::-1::1723755984::0::1::::<>Control<>::
+Menu.tscn::PackedScene::7576238802465422478::1723756422::0::1::::<><>::res://Menu.gd
 player_scene.tscn::PackedScene::8527135285360130121::1723152529::0::1::::<><>::res://The begening/player.gd<>uid://cu3nj2x76bva8::::res://Idle-Sheet.png
 spike.tscn::PackedScene::6964132546233944873::1723150789::0::1::::<><>::
 spikel2.tscn::PackedScene::7908852852174899683::1723152529::0::1::::<><>::
-The begening.tscn::PackedScene::4986999566810714160::1723152528::0::1::::<><>::res://The begening/ui.gd<>uid://dtquw4g4gj8lh::::res://player_scene.tscn<>uid://2ou1e46mh487::::res://kinematic.png<>uid://b4vf1a53dc046::::res://TileMap.png<>uid://2fejn5utanrg::::res://The begening/danger_zone.tscn<>uid://c3k2jha0i2csv::::res://The begening/platform.tscn<>uid://bjnsibstmthbu::::res://coin.tscn<>uid://c6hqil4v8kb4l::::res://spike.tscn<>uid://behquhi28q1xn::::res://door.tscn
+The begening.tscn::PackedScene::4986999566810714160::1723756422::0::1::::<><>::res://The begening/ui.gd<>uid://dtquw4g4gj8lh::::res://player_scene.tscn<>uid://2ou1e46mh487::::res://kinematic.png<>uid://b4vf1a53dc046::::res://TileMap.png<>uid://2fejn5utanrg::::res://The begening/danger_zone.tscn<>uid://c3k2jha0i2csv::::res://The begening/platform.tscn<>uid://bjnsibstmthbu::::res://coin.tscn<>uid://c6hqil4v8kb4l::::res://spike.tscn<>uid://behquhi28q1xn::::res://door.tscn
 TileMap.png::CompressedTexture2D::4465599145257096989::1712262343::1718587886::1::::<><>::
-win.tscn::PackedScene::2358103826706849848::1723152528::0::1::::<><>::res://The begening/win.gd
-::res://l2/::1723423825
+win.tscn::PackedScene::2358103826706849848::1723756422::0::1::::<><>::res://The begening/win.gd
+::res://l2/::1723756423
 l2 patform circle.tscn::PackedScene::1394174803623388544::1723152529::0::1::::<><>::
-l2platform.tscn::PackedScene::3628328801554626435::1723423594::0::1::::<><>::
-level 2.tscn::PackedScene::3149018389592416017::1723423825::0::1::::<><>::uid://2ou1e46mh487::::res://kinematic.png<>uid://b4vf1a53dc046::::res://TileMap.png<>uid://c6hqil4v8kb4l::::res://spike.tscn<>uid://behquhi28q1xn::::res://door.tscn<>uid://bjnsibstmthbu::::res://coin.tscn<>uid://c3k2jha0i2csv::::res://The begening/platform.tscn<>uid://dtquw4g4gj8lh::::res://player_scene.tscn<>uid://dkxdwesau2twt::::res://spikel2.tscn<>uid://brxubsk0ntmnr::::res://l2/l2platform.tscn<>uid://t4l4c0wrgt8s::::res://l2/l2 patform circle.tscn
+l2platform.tscn::PackedScene::3628328801554626435::1723515625::0::1::::<><>::
+level 2.tscn::PackedScene::3149018389592416017::1723756423::0::1::::<><>::uid://2ou1e46mh487::::res://kinematic.png<>uid://b4vf1a53dc046::::res://TileMap.png<>uid://c6hqil4v8kb4l::::res://spike.tscn<>uid://behquhi28q1xn::::res://door.tscn<>uid://bjnsibstmthbu::::res://coin.tscn<>uid://c3k2jha0i2csv::::res://The begening/platform.tscn<>uid://dtquw4g4gj8lh::::res://player_scene.tscn<>uid://dkxdwesau2twt::::res://spikel2.tscn
 ::res://scene/::1718917721
-::res://scene/obstacles /::1723150338
-danger_zone.gd::GDScript::-1::1723150338::0::1::::<>Area2D<>::
+::res://scene/obstacles /::1723756423
+danger_zone.gd::GDScript::-1::1723515617::0::1::::<>Area2D<>::
 danger_zone.tscn::PackedScene::5139799783208197700::1719283102::0::1::::<><>::res://scene/obstacles /danger_zone.gd
-::res://The begening/::1723152529
+level menu.tscn::PackedScene::467497093210137218::1723756423::0::1::::<><>::res://scene/obstacles /level menu.gd
+level menu.gd::GDScript::-1::1723698863::0::1::::<>Control<>::
+::res://The begening/::1723756420
 coin.gd::GDScript::-1::1722821377::0::1::::<>Area2D<>::
 danger_zone.tscn::PackedScene::1905680337195181996::1723152529::0::1::::<><>::res://scene/obstacles /danger_zone.gd
 global.gd::GDScript::-1::1722821377::0::1::::<>Node<>::
@@ -34,4 +36,4 @@ player.gd::GDScript::-1::1723150553::0::1::::Player<>CharacterBody2D<>::
 player_scene.tscn::PackedScene::2768790062264044988::1722821377::0::1::::<><>::uid://cu3nj2x76bva8::::res://Idle-Sheet.png
 TileMap.gd::GDScript::-1::1722821377::0::1::::<>TileMap<>::
 ui.gd::GDScript::-1::1722821377::0::1::::<>CanvasLayer<>::
-win.gd::GDScript::-1::1722821377::0::1::::<>Control<>::
+win.gd::GDScript::-1::1723756420::0::1::::<>Control<>::
