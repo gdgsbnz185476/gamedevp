@@ -1,13 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://gwpux2gcy2uo"]
 
-[ext_resource type="Script" path="res://scene/obstacles /level menu.gd" id="1_8hesa"]
+[ext_resource type="Script" path="res://scene/obstacles /level menu.gd" id="1_1hoq7"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_8hesa")
+script = ExtResource("1_1hoq7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -24,6 +24,7 @@ offset_top = 96.0
 offset_right = 691.0
 offset_bottom = 194.0
 text = "The begening"
+metadata/Thebegening = true
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
@@ -32,6 +33,17 @@ offset_top = 222.0
 offset_right = 690.0
 offset_bottom = 330.0
 text = "level 2"
+metadata/level2 = true
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 576.0
+offset_right = 231.0
+offset_bottom = 634.0
+text = "Back"
+metadata/back = true
+
+[connection signal="pressed" from="Button" to="." method="_on_Thebegening_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_back_pressed"]

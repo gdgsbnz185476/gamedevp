@@ -26,6 +26,7 @@ offset_top = 63.0
 offset_right = 687.0
 offset_bottom = 178.0
 text = "Level"
+metadata/level = true
 
 [node name="Button" type="Button" parent="CanvasLayer/Label/Button"]
 layout_mode = 0

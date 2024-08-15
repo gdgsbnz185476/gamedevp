@@ -27,4 +27,4 @@ func _Menu():
 	
 
 func _level2():
-	get_tree().change_scene_to_file("res://level 2.tscn")
+	get_tree().change_scene_to_file("res://l2/level2.tscn")
