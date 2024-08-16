@@ -3020,6 +3020,7 @@ texture = ExtResource("2_oik6u")
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_7cckx"]
 physics_layer_0/collision_layer = 1
@@ -3072,7 +3073,7 @@ position = Vector2(299, 517)
 position = Vector2(319, 499)
 
 [node name="Area2D6" parent="." instance=ExtResource("3_u15sr")]
-position = Vector2(488, 464)
+position = Vector2(467, 481)
 
 [node name="Area2D7" parent="." instance=ExtResource("3_u15sr")]
 position = Vector2(425, 582)
@@ -3081,7 +3082,7 @@ position = Vector2(425, 582)
 position = Vector2(509, 531)
 
 [node name="Area2D9" parent="." instance=ExtResource("3_u15sr")]
-position = Vector2(484, 379)
+position = Vector2(465, 403)
 
 [node name="Area2D10" parent="." instance=ExtResource("3_u15sr")]
 position = Vector2(616, 286)
@@ -3096,10 +3097,10 @@ position = Vector2(667, 157)
 position = Vector2(654, 132)
 
 [node name="Area2D14" parent="." instance=ExtResource("3_u15sr")]
-position = Vector2(635, 112)
+position = Vector2(648, 113)
 
 [node name="Area2D15" parent="." instance=ExtResource("3_u15sr")]
-position = Vector2(670, 74)
+position = Vector2(688, 76)
 rotation = 0.803609
 scale = Vector2(1, 5.36)
 
@@ -3141,7 +3142,7 @@ position = Vector2(667, 220)
 position = Vector2(510, 70)
 
 [node name="Area2D29" parent="." instance=ExtResource("4_fm1qk")]
-position = Vector2(648, 179)
+position = Vector2(637, 183)
 
 [node name="Area2D30" parent="." instance=ExtResource("4_fm1qk")]
 position = Vector2(558, 230)
@@ -3166,13 +3167,13 @@ scale = Vector2(-0.04, 0.279995)
 position = Vector2(460, 523)
 
 [node name="Area2D36" parent="." instance=ExtResource("4_fm1qk")]
-position = Vector2(427, 304)
+position = Vector2(477, 331)
 
 [node name="Area2D37" parent="." instance=ExtResource("4_fm1qk")]
 position = Vector2(560, 327)
 
 [node name="Area2D38" parent="." instance=ExtResource("4_fm1qk")]
-position = Vector2(370, 487)
+position = Vector2(376, 487)
 
 [node name="Area2D39" parent="." instance=ExtResource("4_fm1qk")]
 position = Vector2(397, 584)
@@ -3235,10 +3236,10 @@ position = Vector2(425, 582)
 position = Vector2(509, 531)
 
 [node name="Area2D59" parent="." instance=ExtResource("7_etvkq")]
-position = Vector2(488, 464)
+position = Vector2(466, 481)
 
 [node name="Area2D60" parent="." instance=ExtResource("7_etvkq")]
-position = Vector2(484, 380)
+position = Vector2(465, 402)
 
 [node name="Area2D61" parent="." instance=ExtResource("7_etvkq")]
 position = Vector2(299, 517)
@@ -3284,10 +3285,10 @@ position = Vector2(667, 157)
 position = Vector2(654, 133)
 
 [node name="Area2D75" parent="." instance=ExtResource("7_etvkq")]
-position = Vector2(635, 112)
+position = Vector2(647, 113)
 
 [node name="Area2D76" parent="." instance=ExtResource("7_etvkq")]
-position = Vector2(672, 73)
+position = Vector2(688, 76)
 rotation = -0.762254
 scale = Vector2(5.20889, 1)
 
@@ -3300,4 +3301,4 @@ rotation = -0.597079
 scale = Vector2(1, 0.656006)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("6_4ngss")]
-position = Vector2(512, 47)
+position = Vector2(502, 47)
