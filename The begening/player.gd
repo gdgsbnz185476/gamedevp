@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @export var level_id : int
 @export var level_start_pos : Node2D
-@export var SPEED = 400.0
+@export var SPEED = 3000.0
 @export var JUMP_VELOCITY = -450.0
 @export var DOUBLE_JUMP_VELOCITY = -550.0
 
