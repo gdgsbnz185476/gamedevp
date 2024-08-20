@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @export var level_id : int
 @export var level_start_pos : Node2D
-@export var SPEED = 3000.0
+@export var SPEED = 300.0
 @export var JUMP_VELOCITY = -450.0
 @export var DOUBLE_JUMP_VELOCITY = -550.0
 
@@ -74,6 +74,7 @@ func _coin(area):
 
 func _win(area):
 	if area.has_meta("door"):
+		print("door")
 		if total_coins == global.coin:
 			show_win_screen()
 func show_win_screen():
