@@ -56,4 +56,5 @@ metadata/back = true
 
 [connection signal="visibility_changed" from="." to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Label/Button" to="." method="_on_Level_pressed"]
+[connection signal="pressed" from="CanvasLayer/Label/Button/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_back_pressed"]

@@ -3033,23 +3033,28 @@ script = ExtResource("1_ibgmo")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_right = 58.0
-offset_bottom = 29.0
+modulate = Color(0, 0, 0, 1)
+offset_left = 29.0
+offset_top = 18.0
+offset_right = 87.0
+offset_bottom = 47.0
 text = "coins:"
 
 [node name="Label" type="Label" parent="CanvasLayer/Label"]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 2.0
-offset_top = 20.0
-offset_right = 60.0
-offset_bottom = 49.0
+offset_left = -2.0
+offset_top = 23.0
+offset_right = 56.0
+offset_bottom = 52.0
 text = "lives:
 "
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(584, 331)
+position = Vector2(592, 324)
 shape = SubResource("RectangleShape2D_0vmkv")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -3123,14 +3128,11 @@ position = Vector2(971, 281)
 position = Vector2(1061, 228)
 
 [node name="Area2D24" parent="." instance=ExtResource("3_u15sr")]
-position = Vector2(1040, 406)
+position = Vector2(1047, 404)
 
 [node name="Area2D25" parent="." instance=ExtResource("3_u15sr")]
 position = Vector2(721, 577)
 scale = Vector2(6.64, 1)
-
-[node name="Area2D27" parent="." instance=ExtResource("4_fm1qk")]
-position = Vector2(667, 220)
 
 [node name="Area2D28" parent="." instance=ExtResource("4_fm1qk")]
 position = Vector2(510, 70)
@@ -3139,13 +3141,7 @@ position = Vector2(510, 70)
 position = Vector2(635, 198)
 
 [node name="Area2D30" parent="." instance=ExtResource("4_fm1qk")]
-position = Vector2(558, 230)
-
-[node name="Area2D31" parent="." instance=ExtResource("4_fm1qk")]
-position = Vector2(750, 292)
-
-[node name="Area2D32" parent="." instance=ExtResource("4_fm1qk")]
-position = Vector2(590, 384)
+position = Vector2(558, 229)
 
 [node name="Area2D33" parent="." instance=ExtResource("4_fm1qk")]
 position = Vector2(768, 456)
@@ -3156,9 +3152,6 @@ position = Vector2(667, 527)
 [node name="StaticBody2D" parent="." instance=ExtResource("5_upf7q")]
 position = Vector2(731, 556)
 scale = Vector2(-0.145534, -0.189243)
-
-[node name="Area2D35" parent="." instance=ExtResource("4_fm1qk")]
-position = Vector2(460, 523)
 
 [node name="Area2D36" parent="." instance=ExtResource("4_fm1qk")]
 position = Vector2(490, 332)
@@ -3193,9 +3186,6 @@ position = Vector2(708, 455)
 [node name="Area2D46" parent="." instance=ExtResource("4_fm1qk")]
 position = Vector2(836, 347)
 
-[node name="Area2D48" parent="." instance=ExtResource("4_fm1qk")]
-position = Vector2(987, 115)
-
 [node name="Area2D49" parent="." instance=ExtResource("4_fm1qk")]
 position = Vector2(1036, 267)
 
@@ -3207,9 +3197,6 @@ position = Vector2(1003, 503)
 
 [node name="Area2D52" parent="." instance=ExtResource("4_fm1qk")]
 position = Vector2(1129, 514)
-
-[node name="Area2D53" parent="." instance=ExtResource("4_fm1qk")]
-position = Vector2(637, 624)
 
 [node name="Area2D54" parent="." instance=ExtResource("7_etvkq")]
 position = Vector2(683, 394)
@@ -3246,7 +3233,7 @@ scale = Vector2(6.54298, 1)
 position = Vector2(938, 404)
 
 [node name="Area2D67" parent="." instance=ExtResource("7_etvkq")]
-position = Vector2(1040, 406)
+position = Vector2(1048, 405)
 
 [node name="Area2D68" parent="." instance=ExtResource("7_etvkq")]
 position = Vector2(635, 290)
@@ -3286,6 +3273,6 @@ rotation = -0.597079
 scale = Vector2(1, 0.656006)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("6_4ngss")]
-position = Vector2(516, 56)
+position = Vector2(524, 64)
 
 [connection signal="area_entered" from="Area2D78" to="." method="_on_area_2d_78_area_entered"]

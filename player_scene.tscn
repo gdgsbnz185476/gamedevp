@@ -83,6 +83,7 @@ position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_615u7")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_ky5kb")
 texture_scale = 1.6
@@ -98,7 +99,7 @@ frame_progress = 0.400948
 wait_time = 2.126
 one_shot = true
 
+[connection signal="area_entered" from="Area2D" to="." method="_death"]
 [connection signal="area_entered" from="Area2D" to="." method="_coin"]
 [connection signal="area_entered" from="Area2D" to="." method="_win"]
-[connection signal="area_entered" from="Area2D" to="." method="_death"]
 [connection signal="timeout" from="reset_timer" to="." method="reset_player"]

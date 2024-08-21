@@ -4,3 +4,9 @@ res://scene/obstacles /danger_zone.gd
 res://The begening/player.gd
 res://Menu.gd
 res://l2/level2.tscn
+res://Menu.tscn
+res://settings.tscn
+res://settings.gd
+res://player_scene.tscn
+res://coin.tscn
+res://The begening/ui.gd

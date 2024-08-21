@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://fd4y52eby0gw"]
+
+[ext_resource type="Script" path="res://settings.gd" id="1_2efmn"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1166.0
+offset_bottom = 644.0
+scale = Vector2(1, 0.992151)
+script = ExtResource("1_2efmn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "settings 
+"
+
+[node name="CheckButton" type="CheckButton" parent="CanvasLayer/Label"]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 25.0
+offset_right = 766.0
+offset_bottom = 204.0
+text = "Audio
+"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 580.0
+offset_right = 227.0
+offset_bottom = 640.0
+text = "Back"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 206.622
+offset_right = 632.0
+offset_bottom = 262.622
+text = "Controls "
+
+[connection signal="pressed" from="Button" to="." method="_on_back_pressed"]
