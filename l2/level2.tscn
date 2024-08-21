@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bk4n4w7rbwdmn"]
+[gd_scene load_steps=15 format=3 uid="uid://bk4n4w7rbwdmn"]
 
 [ext_resource type="Texture2D" uid="uid://2ou1e46mh487" path="res://kinematic.png" id="1_4r30n"]
 [ext_resource type="Script" path="res://l2/level2.gd" id="1_ibgmo"]
+[ext_resource type="Script" path="res://l2/ui.gd" id="2_fn64u"]
 [ext_resource type="Texture2D" uid="uid://b4vf1a53dc046" path="res://TileMap.png" id="2_oik6u"]
 [ext_resource type="PackedScene" uid="uid://c6hqil4v8kb4l" path="res://spike.tscn" id="3_u15sr"]
 [ext_resource type="PackedScene" uid="uid://bjnsibstmthbu" path="res://coin.tscn" id="4_fm1qk"]
@@ -3030,32 +3031,32 @@ sources/1 = SubResource("TileSetAtlasSource_70mh6")
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ibgmo")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-modulate = Color(0, 0, 0, 1)
-offset_left = 29.0
-offset_top = 18.0
-offset_right = 87.0
-offset_bottom = 47.0
-text = "coins:"
-
-[node name="Label" type="Label" parent="CanvasLayer/Label"]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 0
-offset_left = -2.0
-offset_top = 23.0
-offset_right = 56.0
-offset_bottom = 52.0
-text = "lives:
-"
-
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-1, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(592, 324)
 shape = SubResource("RectangleShape2D_0vmkv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D"]
+script = ExtResource("2_fn64u")
+
+[node name="Label" type="Label" parent="Area2D/CanvasLayer"]
+modulate = Color(0.00820202, 0.00820202, 0.00820202, 1)
+offset_left = 26.0
+offset_top = 15.0
+offset_right = 145.0
+offset_bottom = 54.0
+text = "coins:"
+script = ExtResource("2_fn64u")
+
+[node name="Label2" type="Label" parent="Area2D/CanvasLayer"]
+modulate = Color(0.0214346, 0.0214346, 0.0214346, 1)
+offset_left = 26.0
+offset_top = 36.0
+offset_right = 142.0
+offset_bottom = 102.0
+text = "lives:"
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(8, 0)
@@ -3275,4 +3276,5 @@ scale = Vector2(1, 0.656006)
 [node name="CharacterBody2D" parent="." instance=ExtResource("6_4ngss")]
 position = Vector2(524, 64)
 
+[connection signal="area_entered" from="Area2D30" to="." method="_on_area_2d_30_area_entered"]
 [connection signal="area_entered" from="Area2D78" to="." method="_on_area_2d_78_area_entered"]

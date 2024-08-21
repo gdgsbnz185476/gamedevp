@@ -10,3 +10,5 @@ res://settings.gd
 res://player_scene.tscn
 res://coin.tscn
 res://The begening/ui.gd
+res://l2/ui.gd
+res://The begening/global.gd
