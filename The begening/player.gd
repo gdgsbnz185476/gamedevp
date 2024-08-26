@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var level_start_pos : Node2D
 @export var SPEED = 250.0
 @export var JUMP_VELOCITY = -450.0
-@export var DOUBLE_JUMP_VELOCITY = -550.0
+@export var DOUBLE_JUMP_VELOCITY = -600.0
 
 var spawn_point
 var double_jump = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dtquw4g4gj8lh"]
+[gd_scene load_steps=12 format=3 uid="uid://bewf6lkernck5"]
 
 [ext_resource type="Script" path="res://The begening/player.gd" id="1_ht407"]
 [ext_resource type="Texture2D" uid="uid://cu3nj2x76bva8" path="res://Idle-Sheet.png" id="1_jgult"]
@@ -83,6 +83,7 @@ position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_615u7")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_ky5kb")
 texture_scale = 1.6
