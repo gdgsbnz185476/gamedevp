@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://c6hqil4v8kb4l" path="res://spike.tscn" id="3_u15sr"]
 [ext_resource type="PackedScene" uid="uid://bjnsibstmthbu" path="res://coin.tscn" id="4_fm1qk"]
 [ext_resource type="PackedScene" uid="uid://c3k2jha0i2csv" path="res://The begening/platform.tscn" id="5_upf7q"]
-[ext_resource type="PackedScene" uid="uid://dtquw4g4gj8lh" path="res://player_scene.tscn" id="6_4ngss"]
 [ext_resource type="PackedScene" uid="uid://dkxdwesau2twt" path="res://spikel2.tscn" id="7_etvkq"]
 [ext_resource type="PackedScene" uid="uid://behquhi28q1xn" path="res://door.tscn" id="8_foqpo"]
+[ext_resource type="PackedScene" uid="uid://bewf6lkernck5" path="res://l2/player_scene l2.tscn" id="10_uqgn5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0vmkv"]
 size = Vector2(1180, 651)
@@ -3272,8 +3272,8 @@ position = Vector2(1148, 499)
 rotation = -0.597079
 scale = Vector2(1, 0.656006)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("6_4ngss")]
-position = Vector2(524, 64)
+[node name="CharacterBody2D" parent="." instance=ExtResource("10_uqgn5")]
+position = Vector2(513, 40)
 
 [connection signal="area_entered" from="Area2D30" to="." method="_on_area_2d_30_area_entered"]
 [connection signal="area_entered" from="Area2D78" to="." method="_on_area_2d_78_area_entered"]
