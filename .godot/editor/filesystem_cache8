@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1724635504
+::res://::1724807885
 coin.tscn::PackedScene::3046064460669098762::1724635467::0::1::::<><>::res://The begening/coin.gd
 door.tscn::PackedScene::2682634271579411955::1723766992::0::1::::<><>::
 doorl2.tscn::PackedScene::1200417984775061705::1723151121::0::1::::<><>::
@@ -7,23 +7,23 @@ icon.svg::CompressedTexture2D::4186416440454604828::1710811437::1718587886::1:::
 Idle-Sheet.png::CompressedTexture2D::6235227665468010669::1666649110::1718587886::1::::<><>::
 kinematic.png::CompressedTexture2D::1925261093598140430::1674515326::1719283291::1::::<><>::
 Menu.gd::GDScript::-1::1724634103::0::1::::<>Control<>::
-Menu.tscn::PackedScene::7576238802465422478::1724635467::0::1::::<><>::res://Menu.gd
+Menu.tscn::PackedScene::7576238802465422478::1724807885::0::1::::<><>::res://Menu.gd
 player_scene.tscn::PackedScene::8527135285360130121::1724635467::0::1::::<><>::res://The begening/player.gd<>uid://cu3nj2x76bva8::::res://Idle-Sheet.png
 settings.gd::GDScript::-1::1724134800::0::1::::<>Control<>::
-settings.tscn::PackedScene::358942620890560214::1724635467::0::1::::<><>::res://settings.gd
+settings.tscn::PackedScene::358942620890560214::1724807885::0::1::::<><>::res://settings.gd
 spike.tscn::PackedScene::6964132546233944873::1723772108::0::1::::<><>::
 spikel2.tscn::PackedScene::7908852852174899683::1723772108::0::1::::<><>::
-The begening.tscn::PackedScene::4986999566810714160::1724635466::0::1::::<><>::res://The begening/ui.gd<>uid://dtquw4g4gj8lh::::res://player_scene.tscn<>uid://2ou1e46mh487::::res://kinematic.png<>uid://b4vf1a53dc046::::res://TileMap.png<>uid://2fejn5utanrg::::res://The begening/danger_zone.tscn<>uid://c3k2jha0i2csv::::res://The begening/platform.tscn<>uid://bjnsibstmthbu::::res://coin.tscn<>uid://c6hqil4v8kb4l::::res://spike.tscn<>uid://behquhi28q1xn::::res://door.tscn
+The begening.tscn::PackedScene::4986999566810714160::1724807885::0::1::::<><>::res://The begening/ui.gd<>uid://dtquw4g4gj8lh::::res://player_scene.tscn<>uid://2ou1e46mh487::::res://kinematic.png<>uid://b4vf1a53dc046::::res://TileMap.png<>uid://2fejn5utanrg::::res://The begening/danger_zone.tscn<>uid://c3k2jha0i2csv::::res://The begening/platform.tscn<>uid://bjnsibstmthbu::::res://coin.tscn<>uid://c6hqil4v8kb4l::::res://spike.tscn<>uid://behquhi28q1xn::::res://door.tscn
 TileMap.png::CompressedTexture2D::4465599145257096989::1712262343::1718587886::1::::<><>::
 tutorial.tscn::PackedScene::4223169681312569994::1724134800::0::1::::<><>::
 win.tscn::PackedScene::2358103826706849848::1723768964::0::1::::<><>::res://The begening/win.gd
-::res://l2/::1724635504
+::res://l2/::1724807950
 globall2.gd::GDScript::-1::1724217028::0::1::::<>Node<>::
 l2 patform circle.tscn::PackedScene::1394174803623388544::1723152529::0::1::::<><>::
 l2platform.tscn::PackedScene::3628328801554626435::1723515625::0::1::::<><>::
 level2.gd::GDScript::-1::1724634103::0::1::::<>Node2D<>::
-level2.tscn::PackedScene::3149018389592416017::1724635467::0::1::::<><>::uid://2ou1e46mh487::::res://kinematic.png<>res://l2/level2.gd<>res://l2/ui.gd<>uid://b4vf1a53dc046::::res://TileMap.png<>uid://c6hqil4v8kb4l::::res://spike.tscn<>uid://bjnsibstmthbu::::res://coin.tscn<>uid://c3k2jha0i2csv::::res://The begening/platform.tscn<>uid://dtquw4g4gj8lh::::res://player_scene.tscn<>uid://dkxdwesau2twt::::res://spikel2.tscn<>uid://behquhi28q1xn::::res://door.tscn
-player_scene copy.tscn::PackedScene::2712951906819298546::1724635548::0::1::::<><>::res://The begening/player.gd<>uid://cu3nj2x76bva8::::res://Idle-Sheet.png
+level2.tscn::PackedScene::3149018389592416017::1724807950::0::1::::<><>::uid://2ou1e46mh487::::res://kinematic.png<>res://l2/level2.gd<>res://l2/ui.gd<>uid://b4vf1a53dc046::::res://TileMap.png<>uid://c6hqil4v8kb4l::::res://spike.tscn<>uid://bjnsibstmthbu::::res://coin.tscn<>uid://c3k2jha0i2csv::::res://The begening/platform.tscn<>uid://dkxdwesau2twt::::res://spikel2.tscn<>uid://behquhi28q1xn::::res://door.tscn<>uid://bewf6lkernck5::::res://l2/player_scene l2.tscn
+player_scene l2.tscn::PackedScene::2712951906819298546::1724635548::0::1::::<><>::res://The begening/player.gd<>uid://cu3nj2x76bva8::::res://Idle-Sheet.png
 ui.gd::GDScript::-1::1724634725::0::1::::<>CanvasLayer<>::
 ::res://scene/::1718917721
 ::res://scene/obstacles /::1724634103
