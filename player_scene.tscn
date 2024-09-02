@@ -57,6 +57,7 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+disable_mode = 1
 script = ExtResource("1_ht407")
 metadata/player = true
 

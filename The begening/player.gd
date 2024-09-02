@@ -21,7 +21,7 @@ var can_control = true
 
 func _ready():
 	global.coin = 0
-	global.lives = 3
+	global.lives = 5
 	spawn_point = position
 	for coin in coins_group:
 		total_coins += 1

@@ -1122,7 +1122,7 @@ position = Vector2(707, 331)
 position = Vector2(683, 394)
 
 [node name="Area2D18" parent="." instance=ExtResource("3_u15sr")]
-position = Vector2(833, 292)
+position = Vector2(815, 287)
 
 [node name="Area2D19" parent="." instance=ExtResource("3_u15sr")]
 position = Vector2(747, 262)
@@ -1254,7 +1254,7 @@ position = Vector2(635, 290)
 position = Vector2(747, 262)
 
 [node name="Area2D70" parent="." instance=ExtResource("7_etvkq")]
-position = Vector2(833, 292)
+position = Vector2(815, 287)
 
 [node name="Area2D71" parent="." instance=ExtResource("7_etvkq")]
 position = Vector2(971, 281)
