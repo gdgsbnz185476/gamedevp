@@ -1,10 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1724807885
+::res://::1724973391
 coin.tscn::PackedScene::3046064460669098762::1724635467::0::1::::<><>::res://The begening/coin.gd
 door.tscn::PackedScene::2682634271579411955::1723766992::0::1::::<><>::
 doorl2.tscn::PackedScene::1200417984775061705::1723151121::0::1::::<><>::
 icon.svg::CompressedTexture2D::4186416440454604828::1710811437::1718587886::1::::<><>::
 Idle-Sheet.png::CompressedTexture2D::6235227665468010669::1666649110::1718587886::1::::<><>::
+images.png::CompressedTexture2D::3664266351378231604::1724972975::1724973395::1::::<><>::
 kinematic.png::CompressedTexture2D::1925261093598140430::1674515326::1719283291::1::::<><>::
 Menu.gd::GDScript::-1::1724634103::0::1::::<>Control<>::
 Menu.tscn::PackedScene::7576238802465422478::1724807885::0::1::::<><>::res://Menu.gd

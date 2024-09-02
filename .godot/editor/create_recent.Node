@@ -1,3 +1,5 @@
+TileMap
+TileMapLayer
 Label
 CanvasLayer
 Button
@@ -6,7 +8,6 @@ Control
 ColorRect
 CollisionShape2D
 StaticBody2D
-TileMap
 Area2D
 LinkButton
 Timer
