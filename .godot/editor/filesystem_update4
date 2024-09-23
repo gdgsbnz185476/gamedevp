@@ -6,9 +6,7 @@ res://scene/obstacles /danger_zone.gd
 res://l2/level2.gd
 res://l2/ui.gd
 res://Menu.gd
-res://settings.gd
 res://l2/level2.tscn
-res://settings.tscn
 res://Menu.tscn
-res://player_scene.tscn
-res://spikel2.tscn
+res://settings.tscn
+res://enemy.gd

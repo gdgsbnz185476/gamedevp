@@ -1,3 +1,6 @@
+CollisionShape2D
+AnimatedSprite2D
+CharacterBody2D
 TileMap
 TileMapLayer
 Label
@@ -6,8 +9,6 @@ Button
 CheckButton
 Control
 ColorRect
-CollisionShape2D
 StaticBody2D
 Area2D
 LinkButton
-Timer
