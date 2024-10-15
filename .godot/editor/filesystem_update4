@@ -7,6 +7,9 @@ res://l2/level2.gd
 res://l2/ui.gd
 res://Menu.gd
 res://l2/level2.tscn
+res://main menu.tscn
 res://Menu.tscn
-res://settings.tscn
-res://enemy.gd
+res://start_menu.gd
+res://The begening/win.gd
+res://win.tscn
+res://scene/obstacles /level menu.gd

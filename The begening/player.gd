@@ -75,6 +75,8 @@ func _coin(area):
 func _win(area):
 	if area.has_meta("door"):
 		print("door")
+		print(total_coins)
+		print(global.coin)
 		if total_coins == global.coin:
 			show_win_screen()
 func show_win_screen():

@@ -1,4 +1,6 @@
 extends CanvasLayer
+func _on_escape_paressd():
+		get_tree().change_scene_to_file("res://Menu.tscn")
 
 @onready var global = get_node("/root/Global")
 

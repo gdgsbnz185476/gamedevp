@@ -83,14 +83,15 @@ position_smoothing_enabled = true
 position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_615u7")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="PointLight2D2" type="PointLight2D" parent="."]
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_ky5kb")
 texture_scale = 1.6
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 clip_children = 2
-position = Vector2(2.27374e-13, 0)
+z_index = 1
+position = Vector2(3.23117e-27, 1)
 scale = Vector2(0.875, 0.90625)
 sprite_frames = SubResource("SpriteFrames_pac2e")
 frame = 2
@@ -100,7 +101,7 @@ frame_progress = 0.400948
 wait_time = 2.126
 one_shot = true
 
+[connection signal="area_entered" from="Area2D" to="." method="_coin"]
 [connection signal="area_entered" from="Area2D" to="." method="_death"]
 [connection signal="area_entered" from="Area2D" to="." method="_win"]
-[connection signal="area_entered" from="Area2D" to="." method="_coin"]
 [connection signal="timeout" from="reset_timer" to="." method="reset_player"]

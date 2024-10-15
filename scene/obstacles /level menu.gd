@@ -16,9 +16,8 @@ func _on_button_2_pressed():
 
 
 func _on_back_pressed():
-	get_tree().change_scene_to_file("res://Menu.tscn")
+	get_tree().change_scene_to_file("res://scene/obstacles /levelmenu.tscn")
 
 
 func _on_Thebegening_pressed():
 	get_tree().change_scene_to_file("res://The begening.tscn")
-

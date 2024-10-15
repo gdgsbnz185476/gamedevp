@@ -209,8 +209,8 @@ tile_set = SubResource("TileSet_6dtlb")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 92.0
+offset_bottom = 37.0
 text = "settings 
 "
 

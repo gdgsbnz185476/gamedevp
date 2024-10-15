@@ -11,5 +11,6 @@ func _process(delta):
 	pass
 	
 	
-func _collect(body):
-	queue_free()
+#func _collect(body):
+	#print("whoops")
+	#queue_free()

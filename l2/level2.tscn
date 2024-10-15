@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bjnsibstmthbu" path="res://coin.tscn" id="4_fm1qk"]
 [ext_resource type="PackedScene" uid="uid://c3k2jha0i2csv" path="res://The begening/platform.tscn" id="5_upf7q"]
 [ext_resource type="PackedScene" uid="uid://dkxdwesau2twt" path="res://spikel2.tscn" id="7_etvkq"]
-[ext_resource type="PackedScene" uid="uid://behquhi28q1xn" path="res://door.tscn" id="8_foqpo"]
+[ext_resource type="PackedScene" uid="uid://rdqydnxxcmdt" path="res://doorl2.tscn" id="10_lh3eu"]
 [ext_resource type="PackedScene" uid="uid://bewf6lkernck5" path="res://l2/player_scene l2.tscn" id="10_uqgn5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0vmkv"]
@@ -1070,6 +1070,8 @@ offset_bottom = 102.0
 text = "lives:"
 
 [node name="Layer0" type="TileMapLayer" parent="."]
+modulate = Color(0.643981, 0.643981, 0.643981, 1)
+self_modulate = Color(0.60933, 0.60933, 0.60933, 1)
 use_parent_material = true
 position = Vector2(8, 0)
 scale = Vector2(0.995353, 0.98683)
@@ -1279,13 +1281,13 @@ scale = Vector2(5.20889, 1)
 [node name="Area2D77" parent="." instance=ExtResource("7_etvkq")]
 position = Vector2(1060, 228)
 
-[node name="Area2D78" parent="." instance=ExtResource("8_foqpo")]
-position = Vector2(1148, 499)
-rotation = -0.597079
-scale = Vector2(1, 0.656006)
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("10_uqgn5")]
 position = Vector2(513, 40)
 
+[node name="Area2D6" parent="." instance=ExtResource("10_lh3eu")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(1150, 498)
+rotation = -0.591715
+scale = Vector2(0.721128, -0.535748)
+
 [connection signal="area_entered" from="Area2D30" to="." method="_on_area_2d_30_area_entered"]
-[connection signal="area_entered" from="Area2D78" to="." method="_on_area_2d_78_area_entered"]
